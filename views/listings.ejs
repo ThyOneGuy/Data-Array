@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header', { title: title }) %>
+<body>
+  <h1>Property Listings</h1>
+  <ul>
+    <% listings.forEach(function(listing) { %>
+      <li>
+        <h3><%= listing.address %> - <%= listing.price %></h3>
+        <p><%= listing.description %></p>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/">Back to Home</a>
+</body>
+<%- include('partials/footer') %>
+</html>
